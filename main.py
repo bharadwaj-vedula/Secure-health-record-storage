@@ -34,7 +34,6 @@ if option == "Encrypt":
         st.info(f"Using {option2} for Encryption")
         if st.button("Encrypt"):
             encrypted_data = cp.encrypt_aes(key,data)
-            cp.save_image(encrypted_data,"encrypted_file_aes.jpg")
             st.success(f"Encrypted {len(encrypted_data)} {len(data)}")
             st.download_button(label = "Download Encrypted File", data = encrypted_data, file_name = "encrypted_data.jpg")
 
@@ -42,7 +41,6 @@ if option == "Encrypt":
         st.info(f"Using {option2} for Encryption")
         if st.button("Encrypt"):
             encrypted_data = cp.encrypt_blowfish(key,data)
-            cp.save_image(encrypted_data,"encrypted_file_blowfish.jpg")
             st.success(f"Encrypted {len(encrypted_data)} {len(data)}")
             st.download_button(label = "Download Encrypted File", data = encrypted_data, file_name = "encrypted_data.jpg")
         
@@ -50,7 +48,6 @@ if option == "Encrypt":
         st.info(f"Using {option2} for Encryption")        
         if st.button("Encrypt"):
             encrypted_data = cp.encrypt_rc2(key,data)
-            cp.save_image(encrypted_data,"encrypted_file_rc2.jpg")
             st.success(f"Encrypted {len(encrypted_data)} {len(data)}")
             st.download_button(label = "Download Encrypted File", data = encrypted_data, file_name = "encrypted_data.jpg")
     
@@ -80,7 +77,6 @@ if option == "Decrypt":
         st.info(f"Using {option2} for Decryption")
         if st.button("Decrypt"):
             decrypted_data = cp.decrypt_aes(key,data)
-            cp.save_image(decrypted_data,"decrypted_file_aes.jpg")
             st.download_button(label = "Download Decrypted File", data = decrypted_data, file_name = "decrypted_data.jpg")
             st.success("Decrypted")
 
@@ -88,7 +84,6 @@ if option == "Decrypt":
         st.info(f"Using {option2} for Decryption")
         if st.button("Decrypt"):
             decrypted_data = cp.decrypt_blowfish(key,data)
-            cp.save_image(decrypted_data,"decrypted_file_blowfish.jpg")
             st.download_button(label = "Download Decrypted File", data = decrypted_data, file_name = "decrypted_data.jpg")
             st.success("Decrypted")
 
@@ -96,7 +91,6 @@ if option == "Decrypt":
         st.info(f"Using {option2} for Decryption")
         if st.button("Decrypt"):
             decrypted_data = cp.decrypt_rc2(key,data)
-            cp.save_image(decrypted_data,"decrypted_file_rc2.jpg")
             st.download_button(label = "Download Decrypted File", data = decrypted_data, file_name = "decrypted_data.jpg")
             st.success("Decrypted")
 
